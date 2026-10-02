@@ -3,6 +3,7 @@ import { ReferenceTone } from './tone.js';
 import { PitchListener } from './pitchDetect.js';
 import { logAttempt, getHistory } from './sheetApi.js';
 import { renderProgressChart } from './chart.js';
+import { initAuthGate } from './auth.js';
 
 const LISTEN_SECONDS = 10;
 const SETTLE_SECONDS = 3; // only the final N seconds count toward the measured pitch
@@ -261,4 +262,4 @@ startBtn.addEventListener('click', () => {
   startAttempt();
 });
 
-populateSelects();
+initAuthGate(populateSelects);

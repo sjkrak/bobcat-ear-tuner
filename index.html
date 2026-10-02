@@ -7,7 +7,16 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<main>
+<div id="authGate" class="auth-gate">
+  <form id="authForm" class="auth-form">
+    <h1>Bobcat Ear Tuner</h1>
+    <label for="authPassword">Enter the class password</label>
+    <input type="password" id="authPassword" autocomplete="off" />
+    <button type="submit">Enter</button>
+    <p id="authError" class="auth-error" hidden>Incorrect password — try again.</p>
+  </form>
+</div>
+<main id="appMain" hidden>
   <h1>Bobcat Ear Tuner</h1>
   <p class="subtitle">Train your ear, not your eyes.</p>
 

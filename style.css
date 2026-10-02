@@ -28,6 +28,75 @@ main {
   z-index: 1;
 }
 
+.auth-gate {
+  position: relative;
+  z-index: 1;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-gate[hidden] {
+  display: none;
+}
+
+.auth-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.auth-form h1 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.auth-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin: 16px 0 6px;
+  text-align: left;
+}
+
+.auth-form input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.auth-form button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #6b7fd7;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background: #5a6dc0;
+}
+
+.auth-error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
 main {
   max-width: 480px;
   margin: 0 auto;
