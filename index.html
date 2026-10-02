@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bobcat Ear Tuner</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+  <h1>Bobcat Ear Tuner</h1>
+  <p class="subtitle">Train your ear, not your eyes.</p>
+
+  <section class="panel">
+    <label for="studentSelect">Student</label>
+    <select id="studentSelect">
+      <option value="">Select your name...</option>
+    </select>
+
+    <label for="noteSelect">Tuning note</label>
+    <select id="noteSelect"></select>
+
+    <label for="toneSelect">Tone type</label>
+    <select id="toneSelect">
+      <option value="pure">Pure (flute-like)</option>
+      <option value="blend">Blend (in between)</option>
+      <option value="reed">Reed (saxophone-like)</option>
+    </select>
+
+    <label for="volumeSlider">Volume <span id="volumeLabel">60%</span></label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.6" />
+
+    <label>Mode</label>
+    <div class="mode-toggle">
+      <label class="mode-option"><input type="radio" name="mode" value="practice" checked /> Practice</label>
+      <label class="mode-option"><input type="radio" name="mode" value="test" /> Test (recorded)</label>
+    </div>
+
+    <button id="startBtn">Start</button>
+
+    <p id="statusText" class="status">Select your name, note, and tone, then press Start.</p>
+    <p id="debugText" class="debug" hidden></p>
+  </section>
+
+  <section class="panel" id="progressSection" hidden>
+    <h2>Your Progress</h2>
+    <canvas id="progressChart" width="600" height="260"></canvas>
+    <p class="hint">Each point is one attempt. 0 = in tune, above = sharp, below = flat.</p>
+  </section>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
