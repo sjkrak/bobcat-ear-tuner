@@ -17,7 +17,18 @@
   </form>
 </div>
 <main id="appMain" hidden>
-  <h1>Bobcat Ear Tuner</h1>
+  <div class="title-row">
+    <h1>Bobcat Ear Tuner</h1>
+    <div class="help-wrap">
+      <button id="helpBtn" class="help-btn" type="button" aria-label="How this works" aria-expanded="false">?</button>
+      <div id="helpTooltip" class="help-tooltip" role="tooltip">
+        <p>Pick a tuning note and a tone, then choose Practice (just for you) or Test (saved to your progress).</p>
+        <p>Press Start to hear the reference tone, then play or sing to match its pitch — keep matching for the full 10 seconds while it plays.</p>
+        <p>There's no visual meter here on purpose — the point is to train your ear, not your eyes.</p>
+        <p>Afterward you'll see your result in cents (100 cents = one half step). 0 means perfectly in tune.</p>
+      </div>
+    </div>
+  </div>
   <p class="subtitle">Train your ear, not your eyes.</p>
 
   <section class="panel">

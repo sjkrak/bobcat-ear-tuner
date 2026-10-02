@@ -262,4 +262,24 @@ startBtn.addEventListener('click', () => {
   startAttempt();
 });
 
+const helpBtn = document.getElementById('helpBtn');
+const helpWrap = helpBtn.closest('.help-wrap');
+helpBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const isOpen = helpWrap.classList.toggle('open');
+  helpBtn.setAttribute('aria-expanded', String(isOpen));
+});
+document.addEventListener('click', (e) => {
+  if (!helpWrap.contains(e.target)) {
+    helpWrap.classList.remove('open');
+    helpBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    helpWrap.classList.remove('open');
+    helpBtn.setAttribute('aria-expanded', 'false');
+  }
+});
+
 initAuthGate(populateSelects);
